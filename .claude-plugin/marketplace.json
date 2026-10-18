@@ -1,0 +1,11 @@
+{
+  "name": "agent-supervisor",
+  "owner": { "name": "BHUPESH003" },
+  "plugins": [
+    {
+      "name": "agent-supervisor",
+      "source": "./",
+      "description": "Supervise parallel coding agents (Kiro, Claude Code, any headless CLI) from Claude: briefs, worktrees, watching, CI-once verification, session reuse, device testing, cleanup."
+    }
+  ]
+}
