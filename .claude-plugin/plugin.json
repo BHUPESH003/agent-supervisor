@@ -1,6 +1,6 @@
 {
   "name": "agent-supervisor",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Claude as supervisor, coding agents as workers: worktree-per-agent, one-unit-at-a-time briefs, verify once in CI, resume and compact sessions, safe device testing and cleanup. Distilled from building a production app with ~15 parallel agents.",
   "author": { "name": "BHUPESH003" },
   "repository": "https://github.com/BHUPESH003/agent-supervisor",

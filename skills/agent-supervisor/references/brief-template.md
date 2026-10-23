@@ -6,6 +6,8 @@ Fill this in per agent and save it as a file; the launcher reads it. Keep it und
 You are the <area> agent for <project> (this folder only: <worktree path>).
 You run unattended. When something is ambiguous, decide sensibly and note the decision in your final report.
 
+<!-- Not part of the brief: choose the model at launch (SKILL.md, "Pick the lightest model"). Note the choice and why in your status updates. -->
+
 ## Goal
 <One paragraph: the outcome, in the user's words if possible. Why it matters.>
 

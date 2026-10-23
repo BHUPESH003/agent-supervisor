@@ -24,9 +24,11 @@ What you need from any CLI:
 1. A non-interactive mode that exits when it's done.
 2. Auto-approval of tools, scoped to the worktree.
 3. A resume or continue flag.
-4. Ideally a compact or summarise command.
+4. Ideally a compact or summarise command, and a command that prints context use.
+`launch-agent.sh` has presets for `kiro` and `claude`. For anything else use `AGENT_CLI=custom` and set `AGENT_CMD` (the headless command, prompt is appended), `AGENT_RESUME_FLAG`, `AGENT_CTX_PROMPT` and `AGENT_COMPACT_PROMPT`; leave the last two empty if the CLI has none, and `--compact-above` is then skipped. Example: `AGENT_CLI=custom AGENT_CMD="codex exec --full-auto" AGENT_MODEL_FLAG=-m ...` (check your CLI's real flags).
 If there's no resume, keep a `NOTES.md` in the worktree that the agent updates. Start each follow-up with "read NOTES.md first".
 
 ## Choosing models
-- Use a strong coding model for workers doing real implementation.
+Pick the lightest model that can do the unit well, per agent, not per project. See "Pick the lightest model" in SKILL.md for the tiers. Pass it with the CLI's model flag (`--model` for Kiro and Claude Code; check your CLI's equivalent). Use the model names your CLI lists (`kiro-cli chat --list-models`, `claude --help`), since they change.
 - The supervisor (you) needs judgment more than speed. Keep your own context light by not reading agents' full logs: tail them, and read diffs instead of transcripts.
+- Resumed sessions keep their model. To change it, pass the flag again on resume, and only at a unit boundary.
